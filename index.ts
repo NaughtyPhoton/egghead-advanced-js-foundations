@@ -129,3 +129,12 @@ const bound = getName.bind(dog);
 // 1. Was the function invoked?        -- 
 // 2. How was it invoked?              --  
 // 3. What context was it invoked in?  -- 
+
+/**
+ * Implicit and Explicit Coercion
+ */
+
+const arr = [];
+if (arr.length) {
+  // do something
+}
