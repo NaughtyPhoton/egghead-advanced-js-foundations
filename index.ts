@@ -107,7 +107,7 @@ const cat = {
   }
 }
 
-setTimeout(cat.getName(), 1000);
+// setTimeout(cat.getName(), 1000);
 
 
 /**
@@ -122,7 +122,9 @@ function getName() {
   return `${this.name} is my dog`;
 }
 
-console.log(getName())
+console.log(getName.call(dog));
+
+const bound = getName.bind(dog);
 
 // 1. Was the function invoked?        -- 
 // 2. How was it invoked?              --  
