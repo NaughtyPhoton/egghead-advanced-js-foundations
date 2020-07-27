@@ -1,12 +1,12 @@
 // Import stylesheets
-import './style.css';
+import "./style.css";
 
 // Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
+const appDiv: HTMLElement = document.getElementById("app");
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
 // Primitive Types
-console.log(typeof 'Hello World') // string
+console.log(typeof "Hello World"); // string
 console.log(typeof 42); // number
 console.log(typeof false); // boolean
 console.log(typeof 42n); // bigint
@@ -15,7 +15,7 @@ console.log(typeof null); // object
 console.log(typeof undefined); // undefined
 
 // mutating object
-let myObj = {a: 1};
+let myObj = { a: 1 };
 
 // IIFE That mutates given object
 (function addTwo(obj) {
@@ -43,7 +43,7 @@ console.log(a);
 
 const b = Object.create(a);
 
-a.cool = 'awesome';
+a.cool = "awesome";
 
 console.log(b);
 
@@ -52,7 +52,7 @@ console.log(b);
  */
 function foo() {}
 
-foo.firstName = 'bar';
+foo.firstName = "bar";
 
 console.dir(foo);
 console.log(foo.prototype);
@@ -62,9 +62,9 @@ console.log(foo.toString());
  * Block scopes
  */
 
-var firstName = 'tyler';
+var firstName = "tyler";
 {
-  var firstName = 'clark';
+  var firstName = "clark";
   console.log(firstName);
 }
 console.log(firstName);
@@ -74,10 +74,21 @@ console.log(firstName);
  */
 
 const person = {
-  firstName: 'Nathan',
-  getName() {
-    return `${this.firstName} is my first name.`
+  firstName: "Nathan",
+  value: {
+    getName() {
+      return `${this.firstName} is my first name.`;
+    }
   }
-}
+};
+console.log(person.value.getName());
+
+// 1. Was the function invoked? --  Yes
+// 2. How was it invoked? --  Implicit binding with ()
+// 3. What context was it invoked in?  -- The person object
+
+/**
+ * Arrow Function and Lexical Scoping
+ */
 
 
