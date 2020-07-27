@@ -91,4 +91,39 @@ console.log(person.value.getName());
  * Arrow Function and Lexical Scoping
  */
 
+// const cat = {
+//   firstName: 'oliver',
+//   getName() {
+//     console.log(this.firstName)
+//   }
+// }
 
+const cat = {
+  firstName: 'oliver',
+  getName() {
+    return () => {
+      console.log(this.firstName)
+    }
+  }
+}
+
+setTimeout(cat.getName(), 1000);
+
+
+/**
+ * Explicit binding of 'this' keyword
+ */
+
+const dog = {
+  name: 'crosby'
+}
+
+function getName() {
+  return `${this.name} is my dog`;
+}
+
+console.log(getName())
+
+// 1. Was the function invoked?        -- 
+// 2. How was it invoked?              --  
+// 3. What context was it invoked in?  -- 
