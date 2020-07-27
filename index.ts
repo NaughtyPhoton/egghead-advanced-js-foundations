@@ -68,3 +68,16 @@ var firstName = 'tyler';
   console.log(firstName);
 }
 console.log(firstName);
+
+/**
+ * Implicit binding on 'this' keyword
+ */
+
+const person = {
+  firstName: 'Nathan',
+  getName() {
+    return `${this.firstName} is my first name.`
+  }
+}
+
+
