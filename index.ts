@@ -196,3 +196,4 @@ class Square extends Rectangle {
 
 const square = new Square(50);
 console.log(square);
+
